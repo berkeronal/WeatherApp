@@ -5,7 +5,9 @@ plugins {
 
 android {
     compileSdk 30
-
+    buildFeatures {
+        viewBinding = true
+    }
     defaultConfig {
         applicationId "com.kekod.weatherapp"
         minSdk 23
