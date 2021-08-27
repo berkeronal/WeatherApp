@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">WeatherApp</string>
+    <string name="morpheusPhotoDesc">Basic Morpheus</string>
+    <string name="pillRed">Goes to Day Screen</string>
+    <string name="pillBlue">Goes to Night Screen</string>
+    <string name="sun">Elder god</string>
+    <string name="weatherCondition">SUNNY</string>
+    <string name="humidityText">43%</string>
+    <string name="rainText">33%</string>
+    <string name="temperature">48</string>
+    <string name="temperatureType">°C</string>
+    <string name="city">Alanya</string>
+    <string name="mockDesc">Secret</string>
 </resources>
