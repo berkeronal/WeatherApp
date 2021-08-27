@@ -4,9 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
-    tools:context=".DayActivity">
-
+    tools:context=".NightActivity">
+    <ImageView
+        android:id="@+id/sky"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/n_bg"
+        android:contentDescription="@string/mockDesc"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -23,14 +32,14 @@
         app:layout_constraintGuide_begin="89dp" />
 
     <ImageView
-        android:id="@+id/sun"
+        android:id="@+id/moon"
         android:layout_width="201dp"
         android:layout_height="190dp"
         android:layout_marginTop="36dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline3"
-        app:srcCompat="@drawable/sun1"
+        app:srcCompat="@drawable/moon"
         android:contentDescription="@string/sun"/>
 
     <ImageView
@@ -42,7 +51,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/bg2b"
+        app:srcCompat="@drawable/n_bg2b"
         android:contentDescription="@string/mockDesc"/>
 
     <TextView
@@ -55,7 +64,7 @@
         android:textSize="35sp"
         android:textStyle="bold"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/sun"
+        app:layout_constraintBottom_toTopOf="@+id/moon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -68,7 +77,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:layout_marginBottom="4dp"
-        android:text="@string/temperature"
+        android:text="@string/n_temperature"
         android:textColor="@color/white"
         android:textSize="95sp"
         android:visibility="invisible"
@@ -98,23 +107,23 @@
 
     <ImageView
         android:id="@+id/weatherSVG"
-        android:layout_width="41dp"
-        android:layout_height="46dp"
+        android:layout_width="36dp"
+        android:layout_height="37dp"
+        android:contentDescription="@string/mockDesc"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tempratureText"
         app:layout_constraintHorizontal_bias="0.171"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline4"
-        app:srcCompat="@drawable/ic_sun"
-        app:tint="@color/white"
-        android:contentDescription="@string/mockDesc"/>
+        app:srcCompat="@drawable/ic_moon"
+        app:tint="@color/white" />
 
     <TextView
         android:id="@+id/weatherText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/weatherCondition"
+        android:text="@string/n_weatherCondition"
         android:textColor="@color/white"
         android:textSize="35sp"
         android:visibility="invisible"
@@ -145,7 +154,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
         android:layout_marginTop="3dp"
-        android:text="@string/humidityText"
+        android:text="@string/n_humidityText"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:visibility="invisible"
@@ -179,7 +188,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
         android:layout_marginTop="3dp"
-        android:text="@string/rainText"
+        android:text="@string/n_rainText"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:visibility="invisible"

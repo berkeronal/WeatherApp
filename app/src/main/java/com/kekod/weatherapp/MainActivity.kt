@@ -27,7 +27,8 @@ class MainActivity : AppCompatActivity() {
 
         binding.pillBlue.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
-
+                val intent = Intent(this@MainActivity, NightActivity::class.java)
+                startActivity(intent)
             }
         })
     }

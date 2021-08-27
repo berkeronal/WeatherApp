@@ -11,4 +11,14 @@
     <string name="temperatureType">°C</string>
     <string name="city">Alanya</string>
     <string name="mockDesc">Secret</string>
+
+    <string name="moon">Elder god</string>
+    <string name="n_weatherCondition">CLEAR</string>
+    <string name="n_humidityText">17%</string>
+    <string name="n_rainText">0%</string>
+    <string name="n_temperature">22</string>
+    <string name="n_temperatureType">°C</string>
+    <string name="n_city">Alanya</string>
+
+
 </resources>
