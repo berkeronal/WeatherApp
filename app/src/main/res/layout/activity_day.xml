@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.05" />
+        app:layout_constraintGuide_percent="0.12" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
@@ -32,7 +32,7 @@
 
 
     <ImageView
-        android:id="@+id/sun"
+        android:id="@+id/ivSun"
         android:layout_width="201dp"
         android:layout_height="190dp"
         android:layout_marginTop="36dp"
@@ -65,7 +65,7 @@
         android:textStyle="bold"
         android:visibility="invisible"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/sun"
+        app:layout_constraintBottom_toTopOf="@+id/ivSun"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -137,7 +137,7 @@
         android:layout_width="21dp"
         android:layout_height="21dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="8dp"
         android:contentDescription="@string/mockDesc"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"

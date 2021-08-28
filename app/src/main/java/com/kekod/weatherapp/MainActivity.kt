@@ -7,15 +7,17 @@ import android.os.Bundle
 import android.view.View
 import com.kekod.weatherapp.databinding.ActivityMainBinding
 import android.widget.Toast
+import com.kekod.weatherapp.databinding.ActivityNightBinding
 
 
+private var _binding: ActivityMainBinding? = null
+private val binding get() = _binding!!
 
-
-private lateinit var binding: ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+
+        _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         binding.pillRed.setOnClickListener(object : View.OnClickListener {
@@ -31,5 +33,9 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         })
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
     }
 }

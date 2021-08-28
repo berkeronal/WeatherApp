@@ -45,7 +45,7 @@ class DayActivity : AppCompatActivity() {
 
                 //animate top
                 with(binding) {
-                    sun.startAnimation(sunZoom)
+                    ivSun.startAnimation(sunZoom)
                     tvLocation.startAnimation(fadeIn)
                     tvLocation.isVisible = true
                 }
@@ -61,7 +61,7 @@ class DayActivity : AppCompatActivity() {
 
         })
 
-        binding.sun.startAnimation(sunUp)
+        binding.ivSun.startAnimation(sunUp)
 
 
     }

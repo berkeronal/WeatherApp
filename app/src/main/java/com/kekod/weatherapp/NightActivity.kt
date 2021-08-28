@@ -5,66 +5,86 @@ import android.os.Bundle
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import androidx.core.view.isVisible
+import com.kekod.weatherapp.abstracts.CustomAnimationListener
 import com.kekod.weatherapp.databinding.ActivityDayBinding
 import com.kekod.weatherapp.databinding.ActivityNightBinding
 
-private lateinit var binding: ActivityNightBinding
+private var _binding: ActivityNightBinding? = null
+private val binding get() = _binding!!
+
 class NightActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityNightBinding.inflate(layoutInflater)
+
+        _binding = ActivityNightBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         //init anims
         val moonUp: Animation = AnimationUtils.loadAnimation(this, R.anim.to_up)
         val moonZoom: Animation = AnimationUtils.loadAnimation(this, R.anim.zoom_in_night)
         val bgZoom: Animation = AnimationUtils.loadAnimation(this, R.anim.zoom_in_out_bg)
+        //generice çek tekrardan kaçın
         val fadeIn: Animation = AnimationUtils.loadAnimation(this, R.anim.fade_in)
-        val leftToCenter: Animation = AnimationUtils.loadAnimation(this, R.anim.left_to_center)
 
 
 
-        moonUp.setAnimationListener(object: Animation.AnimationListener {
-            override fun onAnimationStart(animation: Animation?) {
-
-            }
-
+        moonUp.setAnimationListener(object: CustomAnimationListener() {
             override fun onAnimationEnd(animation: Animation?) {
-                binding.moon.startAnimation(moonZoom)
-                binding.location.startAnimation(fadeIn)
-                binding.location.isVisible = true
 
+
+                //animate top
                 //background (sky)
                 binding.sky.startAnimation(bgZoom)
 
+                binding.ivMoon.startAnimation(moonZoom)
+                binding.tvLocation.startAnimation(fadeIn)
+                binding.tvLocation.isVisible = true
 
-                //right
-                binding.tempratureSVG.startAnimation(fadeIn)
-                binding.tempratureText.startAnimation(fadeIn)
-                binding.tempratureSVG.isVisible = true
-                binding.tempratureText.isVisible = true
 
                 //left
-                binding.humidityText.startAnimation(leftToCenter)
-                binding.humiditySVG.startAnimation(leftToCenter)
-                binding.weatherText.startAnimation(leftToCenter)
-                binding.weatherSVG.startAnimation(leftToCenter)
-                binding.rainText.startAnimation(leftToCenter)
-                binding.rainSVG.startAnimation(leftToCenter)
-                binding.humidityText.isVisible = true
-                binding.humiditySVG.isVisible = true
-                binding.weatherText.isVisible = true
-                binding.weatherSVG.isVisible = true
-                binding.rainSVG.isVisible = true
-                binding.rainText.isVisible = true
-            }
+                animateBottomFeft()
 
-            override fun onAnimationRepeat(animation: Animation?) {
-
+                //right
+                animateBottomRight()
             }
         })
 
-        binding.moon.startAnimation(moonUp)
+        binding.ivMoon.startAnimation(moonUp)
 
+    }
+    fun animateBottomFeft() {
+        //init anim
+        val leftToCenter: Animation = AnimationUtils.loadAnimation(this, R.anim.left_to_center)
+
+        with(binding){
+            tvHumidity.startAnimation(leftToCenter)
+            ivHumiditySVG.startAnimation(leftToCenter)
+            tvWeather.startAnimation(leftToCenter)
+            ivWeatherSVG.startAnimation(leftToCenter)
+            tvRain.startAnimation(leftToCenter)
+            ivRainSVG.startAnimation(leftToCenter)
+            tvHumidity.isVisible = true
+            ivHumiditySVG.isVisible = true
+            tvWeather.isVisible = true
+            ivWeatherSVG.isVisible = true
+            ivRainSVG.isVisible = true
+            tvRain.isVisible = true
+        }
+    }
+    fun animateBottomRight() {
+        //init anim
+        val fadeIn: Animation = AnimationUtils.loadAnimation(this, R.anim.fade_in)
+
+        with(binding){
+            tvTempratureSVG.startAnimation(fadeIn)
+            tvTemprature.startAnimation(fadeIn)
+            tvTempratureSVG.isVisible = true
+            tvTemprature.isVisible = true
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
     }
 }
