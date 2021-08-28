@@ -4,11 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Berker/Desktop/WeatherApp/app/src/main/res/drawable/ic_humidity.xml" value="0.21875" />
+        <entry key="..\:/Users/Berker/Desktop/WeatherApp/app/src/main/res/drawable/ic_moon.xml" value="0.21770833333333334" />
         <entry key="..\:/Users/Berker/Desktop/WeatherApp/app/src/main/res/drawable/ic_sun.xml" value="0.21875" />
         <entry key="..\:/Users/Berker/Desktop/WeatherApp/app/src/main/res/drawable/ic_umbrealla.xml" value="0.21875" />
-        <entry key="..\:/Users/Berker/Desktop/WeatherApp/app/src/main/res/layout/activity_day.xml" value="0.18854166666666666" />
-        <entry key="..\:/Users/Berker/Desktop/WeatherApp/app/src/main/res/layout/activity_main.xml" value="0.20260416666666667" />
-        <entry key="..\:/Users/Berker/Desktop/WeatherApp/app/src/main/res/layout/activity_night.xml" value="0.20260416666666667" />
+        <entry key="..\:/Users/Berker/Desktop/WeatherApp/app/src/main/res/layout/activity_day.xml" value="0.4951590594744122" />
+        <entry key="..\:/Users/Berker/Desktop/WeatherApp/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Berker/Desktop/WeatherApp/app/src/main/res/layout/activity_night.xml" value="0.2689367616400278" />
       </map>
     </option>
   </component>
@@ -17,5 +18,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.4951590594744122" />
+      </ProjectState>
+    </option>
   </component>
 </project>

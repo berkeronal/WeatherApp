@@ -10,13 +10,13 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/morpheusPhotoDesc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.201"
-        app:srcCompat="@drawable/morpheus"
-        android:contentDescription="@string/morpheusPhotoDesc"/>
+        app:srcCompat="@drawable/morpheus" />
 
     <ImageButton
         android:id="@+id/pillRed"
@@ -24,27 +24,33 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="57dp"
         android:backgroundTint="@color/transparent"
+        android:contentDescription="@string/pillRed"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.222"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.283"
         app:srcCompat="@drawable/ic_pill"
-        app:tint="@color/red"
-        android:contentDescription="@string/pillRed"/>
+        app:tint="@color/red" />
 
     <ImageButton
         android:id="@+id/pillBlue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="108dp"
         android:backgroundTint="@color/transparent"
+        android:contentDescription="@string/pillBlue"
         app:layout_constraintBottom_toBottomOf="@+id/pillRed"
-        app:layout_constraintStart_toEndOf="@+id/pillRed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toTopOf="@+id/pillRed"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_pill"
-        app:tint="@color/blue"
-        android:contentDescription="@string/pillBlue"/>
+        app:tint="@color/blue" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="202dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
