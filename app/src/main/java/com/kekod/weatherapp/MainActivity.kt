@@ -1,13 +1,10 @@
 package com.kekod.weatherapp
 
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.kekod.weatherapp.databinding.ActivityMainBinding
-import android.widget.Toast
-import com.kekod.weatherapp.databinding.ActivityNightBinding
+import com.kekod.weatherapp.util.navigate
 
 
 private var _binding: ActivityMainBinding? = null
@@ -20,20 +17,15 @@ class MainActivity : AppCompatActivity() {
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.pillRed.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                val intent = Intent(this@MainActivity, DayActivity::class.java)
-                startActivity(intent)
-            }
-        })
+        binding.pillRed.setOnClickListener {
+            navigate<DayActivity>()
+        }
 
-        binding.pillBlue.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                val intent = Intent(this@MainActivity, NightActivity::class.java)
-                startActivity(intent)
-            }
-        })
+        binding.pillBlue.setOnClickListener {
+            navigate<NightActivity>()
+        }
     }
+
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
