@@ -1,16 +1,15 @@
 package com.kekod.weatherapp
 
-
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.kekod.weatherapp.databinding.ActivityMainBinding
 import com.kekod.weatherapp.util.navigate
 
-
 private var _binding: ActivityMainBinding? = null
 private val binding get() = _binding!!
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

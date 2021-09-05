@@ -7,7 +7,6 @@
     android:background="@drawable/bg"
     tools:context=".DayActivity">
 
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
@@ -29,7 +28,6 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintGuide_percent="0.8" />
-
 
     <ImageView
         android:id="@+id/ivSun"
@@ -60,11 +58,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/city"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="35sp"
         android:textStyle="bold"
         android:visibility="invisible"
-        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/ivSun"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -77,10 +75,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/temperature"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="95sp"
         android:visibility="invisible"
-        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.3"
@@ -99,9 +97,9 @@
         app:layout_constraintBottom_toBottomOf="@+id/tvTemprature"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="0.35"
         app:layout_constraintStart_toEndOf="@+id/tvTemprature"
-        app:layout_constraintTop_toTopOf="@+id/tvTemprature" />
+        app:layout_constraintTop_toTopOf="@+id/tvTemprature"
+        app:layout_constraintVertical_bias="0.35" />
 
     <ImageView
         android:id="@+id/ivWeatherSVG"
@@ -112,9 +110,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.23"
-        app:layout_constraintVertical_bias="0.35"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.35"
         app:srcCompat="@drawable/ic_sun"
         app:tint="@color/white" />
 
@@ -123,14 +121,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/weatherCondition"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="35sp"
         android:visibility="invisible"
-        android:textAlignment="center"
-        app:layout_constraintVertical_bias="0.35"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ivWeatherSVG"
-        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.35" />
 
     <ImageView
         android:id="@+id/ivHumiditySVG"
@@ -199,6 +197,5 @@
         app:layout_constraintStart_toEndOf="@+id/ivRainSVG"
         app:layout_constraintTop_toBottomOf="@+id/tvWeather"
         app:layout_constraintVertical_bias="0.0" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
