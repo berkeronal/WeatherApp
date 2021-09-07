@@ -2,7 +2,6 @@ package com.kekod.weatherapp.util
 
 import android.app.Activity
 import android.content.Intent
-import android.util.Log
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
@@ -13,19 +12,12 @@ inline fun <reified T : Activity> Activity.navigate() {
 
 }
 
-fun View.extStartAnimation(animId: Any) {
-    when (animId) {
-        is Int -> {
-            this.startAnimation(AnimationUtils.loadAnimation(this.context, animId))
-            this.isVisible = true
-        }
-        is Animation -> {
-            this.startAnimation(animId)
-            this.isVisible = true
-        }
-        else -> {
-            Log.e("extStartAnimation", "Paramater type doesn't known")
-        }
-    }
+fun View.extCreateAndStartAnimation(animId: Int) {
+    this.startAnimation(AnimationUtils.loadAnimation(this.context, animId))
+    this.isVisible = true
+}
 
+fun View.extStartAnimation(animation: Animation) {
+    this.startAnimation(animation)
+    this.isVisible = true
 }

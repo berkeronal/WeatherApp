@@ -19,5 +19,10 @@
     <string name="n_temperature">22</string>
     <string name="n_temperatureType">°C</string>
     <string name="n_city">Alanya</string>
+    <string name="appwidget_text">16°C</string>
+    <string name="appwidget_status_text">CLEAR</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">This is an app widget description</string>
+    <string name="configure">Configure</string>
 
 </resources>

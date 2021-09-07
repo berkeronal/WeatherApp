@@ -5,7 +5,9 @@ import android.view.animation.Animation
 import androidx.appcompat.app.AppCompatActivity
 import com.kekod.weatherapp.abstracts.CustomAnimationListener
 import com.kekod.weatherapp.databinding.ActivityDayBinding
+import com.kekod.weatherapp.util.extCreateAndStartAnimation
 import com.kekod.weatherapp.util.extStartAnimation
+import com.kekod.weatherapp.util.handleStatusBar
 import createAnimation
 
 //https://developer.android.com/topic/libraries/view-binding#fragments
@@ -15,6 +17,7 @@ private val binding get() = _binding!!
 class DayActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        handleStatusBar(this)
         super.onCreate(savedInstanceState)
         _binding = ActivityDayBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -23,8 +26,8 @@ class DayActivity : AppCompatActivity() {
             override fun onAnimationEnd(animation: Animation?) {
                 //animate top
                 with(binding) {
-                    ivSun.extStartAnimation(R.anim.zoom_in)
-                    tvLocation.extStartAnimation(R.anim.fade_in)
+                    ivSun.extCreateAndStartAnimation(R.anim.zoom_in)
+                    tvLocation.extCreateAndStartAnimation(R.anim.fade_in)
                 }
                 //left
                 animateBottomLeft()
@@ -36,7 +39,7 @@ class DayActivity : AppCompatActivity() {
         binding.ivSun.extStartAnimation(sunUp)
     }
 
-    fun animateBottomLeft() {
+    private fun animateBottomLeft() {
         //init anims
         val leftToCenter: Animation = createAnimation(R.anim.left_to_center, this)
         with(binding) {
@@ -49,7 +52,7 @@ class DayActivity : AppCompatActivity() {
         }
     }
 
-    fun animateBottomRight() {
+    private fun animateBottomRight() {
         //init anim
         val fadeIn: Animation = createAnimation(R.anim.fade_in, this)
         with(binding) {

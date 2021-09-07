@@ -5,7 +5,9 @@ import android.view.animation.Animation
 import androidx.appcompat.app.AppCompatActivity
 import com.kekod.weatherapp.abstracts.CustomAnimationListener
 import com.kekod.weatherapp.databinding.ActivityNightBinding
+import com.kekod.weatherapp.util.extCreateAndStartAnimation
 import com.kekod.weatherapp.util.extStartAnimation
+import com.kekod.weatherapp.util.handleStatusBar
 import createAnimation
 
 private var _binding: ActivityNightBinding? = null
@@ -14,8 +16,8 @@ private val binding get() = _binding!!
 class NightActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        handleStatusBar(this)
         super.onCreate(savedInstanceState)
-
         _binding = ActivityNightBinding.inflate(layoutInflater)
         setContentView(binding.root)
         //init anims
@@ -25,7 +27,7 @@ class NightActivity : AppCompatActivity() {
             override fun onAnimationEnd(animation: Animation?) {
                 binding.sky.extStartAnimation(bgZoom)
                 binding.ivMoon.extStartAnimation(moonZoom)
-                binding.tvLocation.extStartAnimation(R.anim.fade_in)
+                binding.tvLocation.extCreateAndStartAnimation(R.anim.fade_in)
                 //left
                 animateBottomFeft()
                 //right
@@ -37,7 +39,7 @@ class NightActivity : AppCompatActivity() {
 
     }
 
-    fun animateBottomFeft() {
+    private fun animateBottomFeft() {
         //init anim
         val leftToCenter: Animation = createAnimation(R.anim.left_to_center, this)
 
@@ -51,7 +53,7 @@ class NightActivity : AppCompatActivity() {
         }
     }
 
-    fun animateBottomRight() {
+    private fun animateBottomRight() {
         //init anim
         val fadeIn: Animation = createAnimation(R.anim.fade_in, this)
 
