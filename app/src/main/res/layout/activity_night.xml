@@ -6,18 +6,19 @@
     android:layout_height="match_parent"
     android:backgroundTint="@color/black"
     tools:context=".NightActivity">
+
     <ImageView
         android:id="@+id/sky"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/black"
+        android:contentDescription="@string/mockDesc"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/n_bg"
-        android:backgroundTint="@color/black"
-        android:contentDescription="@string/mockDesc"/>
+        app:srcCompat="@drawable/n_bg" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -46,23 +47,23 @@
         android:layout_width="201dp"
         android:layout_height="190dp"
         android:layout_marginTop="36dp"
+        android:contentDescription="@string/sun"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline3"
-        app:srcCompat="@drawable/moon"
-        android:contentDescription="@string/sun"/>
+        app:srcCompat="@drawable/moon" />
 
     <ImageView
         android:id="@+id/bottomBg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/mockDesc"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/n_bg2b"
-        android:contentDescription="@string/mockDesc"/>
+        app:srcCompat="@drawable/n_bg2b" />
 
     <TextView
         android:id="@+id/tvLocation"
@@ -70,27 +71,27 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/city"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="35sp"
         android:textStyle="bold"
         android:visibility="invisible"
-        android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/ivMoon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline3"
-        app:layout_constraintVertical_bias="1.0"  />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/tvTemprature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/n_temperature"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="95sp"
         android:visibility="invisible"
-        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.3"
@@ -109,9 +110,9 @@
         app:layout_constraintBottom_toBottomOf="@+id/tvTemprature"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="0.35"
         app:layout_constraintStart_toEndOf="@+id/tvTemprature"
-        app:layout_constraintTop_toTopOf="@+id/tvTemprature"  />
+        app:layout_constraintTop_toTopOf="@+id/tvTemprature"
+        app:layout_constraintVertical_bias="0.35" />
 
     <ImageView
         android:id="@+id/ivWeatherSVG"
@@ -122,9 +123,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.23"
-        app:layout_constraintVertical_bias="0.35"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.35"
         app:srcCompat="@drawable/ic_moon"
         app:tint="@color/white" />
 
@@ -133,14 +134,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/n_weatherCondition"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="35sp"
         android:visibility="invisible"
-        android:textAlignment="center"
-        app:layout_constraintVertical_bias="0.35"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ivWeatherSVG"
-        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+        app:layout_constraintTop_toTopOf="@+id/guideline4"
+        app:layout_constraintVertical_bias="0.35" />
 
     <ImageView
         android:id="@+id/ivHumiditySVG"
@@ -174,7 +175,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/ivHumiditySVG"
         app:layout_constraintTop_toBottomOf="@+id/tvWeather"
-        app:layout_constraintVertical_bias="0.0"/>
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/ivRainSVG"
@@ -209,7 +210,5 @@
         app:layout_constraintStart_toEndOf="@+id/ivRainSVG"
         app:layout_constraintTop_toBottomOf="@+id/tvWeather"
         app:layout_constraintVertical_bias="0.0" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,7 +11,6 @@
     <string name="temperatureType">°C</string>
     <string name="city">Alanya</string>
     <string name="mockDesc">Secret</string>
-
     <string name="moon">Elder god</string>
     <string name="n_weatherCondition">CLEAR</string>
     <string name="n_humidityText">17%</string>
@@ -20,9 +19,10 @@
     <string name="n_temperatureType">°C</string>
     <string name="n_city">Alanya</string>
     <string name="appwidget_text">16°C</string>
+    <string name="appwidget_image_description">Full Moon</string>
     <string name="appwidget_status_text">CLEAR</string>
+    <string name="appwidget_location">ALANYA</string>
     <string name="add_widget">Add widget</string>
-    <string name="app_widget_description">This is an app widget description</string>
-    <string name="configure">Configure</string>
+    <string name="app_widget_description">This widget tells you current weather status</string>
 
 </resources>

@@ -1,0 +1,12 @@
+<resources>
+
+    <style name="Widget.WeatherApp.AppWidget.Container" parent="android:Widget">
+        <item name="android:id">@android:id/background</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <style name="Widget.WeatherApp.AppWidget.InnerView" parent="android:Widget">
+        <item name="android:background">@color/transparent</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+</resources>

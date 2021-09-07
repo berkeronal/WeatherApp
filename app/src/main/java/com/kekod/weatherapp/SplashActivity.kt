@@ -2,11 +2,9 @@ package com.kekod.weatherapp
 
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.view.animation.Animation
 import androidx.appcompat.app.AppCompatActivity
 import com.kekod.weatherapp.util.handleStatusBar
 import com.kekod.weatherapp.util.navigate
-import createAnimation
 
 class SplashActivity : AppCompatActivity() {
 
@@ -16,7 +14,6 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
         val timer = object : CountDownTimer(3000, 1000) {
             override fun onTick(millisUntilFinished: Long) {}
-
             override fun onFinish() {
                 navigate<MainActivity>()
                 overridePendingTransition(0, R.anim.fade_out)
